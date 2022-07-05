@@ -8,7 +8,7 @@ module Delayed
     def self.included(base)
       base.extend(ClassMethods)
       base.class_eval do
-        @@logger = Delayed::Worker.logger
+        @logger = Delayed::Worker.logger
         cattr_reader :logger
       end
     end
